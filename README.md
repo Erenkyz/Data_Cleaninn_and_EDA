@@ -6,6 +6,8 @@ First, I inspected the raw layoffs table to understand the structure of the data
 SELECT *
 FROM layoffs;
 ```
+<img width="1004" height="341" alt="image" src="https://github.com/user-attachments/assets/16c03b20-82b5-4832-84c3-f2104dc3c1fb" />
+
 
 
 
