@@ -18,7 +18,7 @@ Both projects follow a structured analytical workflow, starting from raw data in
 
 # 🗂️ Projects Included
 
-🔹 Project 1: SQL Data Cleaning
+## 🔹 Project 1: SQL Data Cleaning
 
 Focus:
 
@@ -38,12 +38,12 @@ Handling NULL and blank values
 
 Removing irrelevant or unusable rows
 
-## 📌 Outcome:
+ 📌 Outcome:
 
 A clean, structured dataset ready for exploratory analysis and reporting.
 
 
-🔹 Project 2: Exploratory Data Analysis (EDA)
+##🔹 Project 2: Exploratory Data Analysis (EDA)
 
 Focus:
 
@@ -63,7 +63,7 @@ Rolling (cumulative) totals over time
 
 Ranking top companies by layoffs per year using window functions
 
-## 📌 Outcome:
+ 📌 Outcome:
 
 Actionable insights that highlight how layoffs evolved across time, industries, and regions.
 
@@ -308,7 +308,7 @@ AND percentage_laid_off IS NULL;
 <img width="1102" height="340" alt="image" src="https://github.com/user-attachments/assets/7b964c1b-2515-47c3-ad7a-2fb87d99c91a" />
 
 
-Exploratory_Data_Analysis
+## Exploratory_Data_Analysis
 
 This query displays all records from the cleaned staging table to verify the final dataset before analysis.
 
