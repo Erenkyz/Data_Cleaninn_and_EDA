@@ -1,8 +1,8 @@
 SQL Data Cleaning & Exploratory Data Analysis Projects
 
-🧠 Project Overview
+# 🧠 Project Overview
 
-This repository contains two end-to-end SQL data analysis projects focusing on data cleaning and exploratory data analysis (EDA) using MySQL.
+ This repository contains two end-to-end SQL data analysis projects focusing on data cleaning and exploratory data analysis (EDA) using MySQL.
 
 The main objectives of these projects are:
 
@@ -16,7 +16,7 @@ Demonstrating strong SQL skills for data analyst and data science roles
 
 Both projects follow a structured analytical workflow, starting from raw data inspection and ending with insight-driven analysis.
 
-🗂️ Projects Included
+## 🗂️ Projects Included
 
 🔹 Project 1: SQL Data Cleaning
 
