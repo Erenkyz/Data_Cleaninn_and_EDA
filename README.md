@@ -1,4 +1,5 @@
 SQL Data Cleaning & Exploratory Data Analysis Projects
+
 🧠 Project Overview
 
 This repository contains two end-to-end SQL data analysis projects focusing on data cleaning and exploratory data analysis (EDA) using MySQL.
@@ -16,6 +17,7 @@ Demonstrating strong SQL skills for data analyst and data science roles
 Both projects follow a structured analytical workflow, starting from raw data inspection and ending with insight-driven analysis.
 
 🗂️ Projects Included
+
 🔹 Project 1: SQL Data Cleaning
 
 Focus:
@@ -36,11 +38,13 @@ Handling NULL and blank values
 Removing irrelevant or unusable rows
 
 📌 Outcome:
+
 A clean, structured dataset ready for exploratory analysis and reporting.
 
 🔹 Project 2: Exploratory Data Analysis (EDA)
 
 Focus:
+
 Analyzing cleaned data to identify trends, patterns, and business insights.
 
 Key analyses performed:
@@ -58,6 +62,7 @@ Rolling (cumulative) totals over time
 Ranking top companies by layoffs per year using window functions
 
 📌 Outcome:
+
 Actionable insights that highlight how layoffs evolved across time, industries, and regions.
 
 🛠️ Tools & Technologies
