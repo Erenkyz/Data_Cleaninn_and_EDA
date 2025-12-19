@@ -16,11 +16,12 @@ Demonstrating strong SQL skills for data analyst and data science roles
 
 Both projects follow a structured analytical workflow, starting from raw data inspection and ending with insight-driven analysis.
 
-## 🗂️ Projects Included
+# 🗂️ Projects Included
 
 🔹 Project 1: SQL Data Cleaning
 
 Focus:
+
 Preparing raw data for analysis by improving data quality and consistency.
 
 Key steps performed:
@@ -37,9 +38,10 @@ Handling NULL and blank values
 
 Removing irrelevant or unusable rows
 
-📌 Outcome:
+## 📌 Outcome:
 
 A clean, structured dataset ready for exploratory analysis and reporting.
+
 
 🔹 Project 2: Exploratory Data Analysis (EDA)
 
@@ -61,11 +63,11 @@ Rolling (cumulative) totals over time
 
 Ranking top companies by layoffs per year using window functions
 
-📌 Outcome:
+## 📌 Outcome:
 
 Actionable insights that highlight how layoffs evolved across time, industries, and regions.
 
-🛠️ Tools & Technologies
+## 🛠️ Tools & Technologies
 
 MySQL
 
@@ -83,7 +85,7 @@ Date functions
 
 Joins and data transformations
 
-🔍 Methodology
+## 🔍 Methodology
 
 Each project follows the same analytical pipeline:
 
@@ -107,7 +109,7 @@ Well-structured SQL code blocks
 
 Query output screenshots for clarity
 
-📸 Visual Documentation
+## 📸 Visual Documentation
 
 For better readability and understanding, query results are documented using:
 
@@ -117,7 +119,7 @@ Visual confirmation of transformations and analysis results
 
 This approach makes the analysis easy to follow even for non-technical stakeholders.
 
-📈 Key Skills Demonstrated
+## 📈 Key Skills Demonstrated
 
 Advanced SQL querying
 
@@ -133,7 +135,7 @@ Writing clear and maintainable SQL code
 
 
 
-Data Cleaning
+## Data Cleaning
 
 First, I inspected the raw layoffs table to understand the structure of the dataset, column names, and data quality before performing any cleaning operations.
 
