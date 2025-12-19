@@ -2,8 +2,10 @@ Data Cleaning
 
 First, I inspected the raw layoffs table to understand the structure of the dataset, column names, and data quality before performing any cleaning operations.
 
+```sql
 SELECT *
 FROM layoffs;
+```
 
 
 
