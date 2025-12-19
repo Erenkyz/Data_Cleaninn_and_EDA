@@ -1,49 +1,134 @@
-🧹 Layoffs Dataset — Data Cleaning Project
+SQL Data Cleaning & Exploratory Data Analysis Projects
+🧠 Project Overview
 
-This project focuses on cleaning and preparing a layoffs dataset using SQL. The goal is to transform raw data into a clean, structured table suitable for analysis and reporting. The dataset contains information about layoffs across companies, industries, and countries.
+This repository contains two end-to-end SQL data analysis projects focusing on data cleaning and exploratory data analysis (EDA) using MySQL.
 
-🗂 Project Overview
-The cleaning process includes:
-Removing Duplicates
-Standardizing Data Formats
-Handling Null or Missing Values
-Dropping Irrelevant / Unnecessary Records
+The main objectives of these projects are:
 
-🔧 Technologies Used
+Cleaning raw, real-world datasets
+
+Handling duplicates, missing values, and inconsistent data
+
+Performing exploratory analysis to uncover meaningful insights
+
+Demonstrating strong SQL skills for data analyst and data science roles
+
+Both projects follow a structured analytical workflow, starting from raw data inspection and ending with insight-driven analysis.
+
+🗂️ Projects Included
+🔹 Project 1: SQL Data Cleaning
+
+Focus:
+Preparing raw data for analysis by improving data quality and consistency.
+
+Key steps performed:
+
+Creating staging tables to preserve raw data
+
+Detecting and removing duplicate records using window functions
+
+Standardizing text fields (company, industry, country)
+
+Converting date columns to proper DATE format
+
+Handling NULL and blank values
+
+Removing irrelevant or unusable rows
+
+📌 Outcome:
+A clean, structured dataset ready for exploratory analysis and reporting.
+
+🔹 Project 2: Exploratory Data Analysis (EDA)
+
+Focus:
+Analyzing cleaned data to identify trends, patterns, and business insights.
+
+Key analyses performed:
+
+Overall layoff statistics and summary metrics
+
+Companies with the highest number of layoffs
+
+Industries and countries most affected
+
+Yearly and monthly layoff trends
+
+Rolling (cumulative) totals over time
+
+Ranking top companies by layoffs per year using window functions
+
+📌 Outcome:
+Actionable insights that highlight how layoffs evolved across time, industries, and regions.
+
+🛠️ Tools & Technologies
+
 MySQL
-SQL Window Functions (ROW_NUMBER)
-Data manipulation queries (UPDATE, DELETE, JOIN, ALTER, TRIM etc.)
 
-📁 Output
-A cleaned and structured dataset:
-layoffs_staging2
-Ready for EDA, visualization, and modeling.
+MySQL Workbench
+
+SQL features used:
+
+CTEs (Common Table Expressions)
+
+Window Functions (ROW_NUMBER, DENSE_RANK)
+
+Aggregations (SUM, AVG, COUNT)
+
+Date functions
+
+Joins and data transformations
+
+🔍 Methodology
+
+Each project follows the same analytical pipeline:
+
+Raw Data Inspection
+
+Data Cleaning & Transformation
+
+Validation of Cleaned Data
+
+Exploratory Analysis
+
+Trend Analysis & Ranking
+
+Insight Extraction
+
+All SQL queries are documented step by step, with:
+
+Clear explanations
+
+Well-structured SQL code blocks
+
+Query output screenshots for clarity
+
+📸 Visual Documentation
+
+For better readability and understanding, query results are documented using:
+
+Screenshot outputs from MySQL Workbench
+
+Visual confirmation of transformations and analysis results
+
+This approach makes the analysis easy to follow even for non-technical stakeholders.
+
+📈 Key Skills Demonstrated
+
+Advanced SQL querying
+
+Data cleaning in relational databases
+
+Exploratory data analysis
+
+Analytical thinking and problem solving
+
+Working with real-world, messy datasets
+
+Writing clear and maintainable SQL code
 
 
-📊 Layoffs Dataset — Exploratory Data Analysis (EDA)
 
-This SQL-based EDA project explores global layoffs trends using aggregations, rankings, pattern identification, and cumulative analysis. The cleaned dataset from the Data Cleaning project serves as the foundation for this analysis.
-
-🎯 Objectives
-
-Identify layoff trends over time
-Compare layoffs across industries, companies, and countries
-Find most affected organizations
-Track layoffs monthly using a rolling cumulative view
-
-🛠 Technologies Used
-
-MySQL
-Grouping & Aggregations (SUM, MIN, MAX)
-Window Functions (DENSE_RANK, OVER())
-CTEs for rolling monthly analysis
-
-📈 Results You Can Derive
-
-Major industries hit hardest by layoffs
-Which years had the highest layoffs
-Rising or declining layoff patterns
-Top companies contributing to workforce reduction yearly
+Data Cleaning
 
 First, I inspected the raw layoffs table to understand the structure of the dataset, column names, and data quality before performing any cleaning operations.
 
@@ -214,6 +299,132 @@ AND percentage_laid_off IS NULL;
 ```
 
 <img width="1102" height="340" alt="image" src="https://github.com/user-attachments/assets/7b964c1b-2515-47c3-ad7a-2fb87d99c91a" />
+
+
+Exploratory_Data_Analysis
+
+This query displays all records from the cleaned staging table to verify the final dataset before analysis.
+
+```sql
+SELECT *
+FROM layoffs_staging2;
+```
+
+<img width="1105" height="340" alt="image" src="https://github.com/user-attachments/assets/5dfd751c-e742-4852-bc50-a4b9d46e8936" />
+
+
+I calculated the maximum number of layoffs and minimum layoff percentage to understand the range of the data.
+
+```sql
+SELECT MAX(total_laid_off), MIN(percentage_laid_off)
+FROM layoffs_staging2;
+```
+
+<img width="355" height="53" alt="image" src="https://github.com/user-attachments/assets/c7a18db6-69ed-43b9-9395-441343e926dd" />
+
+This query identifies companies where the entire workforce was laid off, sorted by funds raised.
+
+```sql
+SELECT *
+FROM layoffs_staging2
+WHERE percentage_laid_off = 1
+ORDER BY funds_raised_millions DESC;
+```
+<img width="1153" height="342" alt="image" src="https://github.com/user-attachments/assets/a6c2735b-9db8-4b87-905e-0c0bcf9195fc" />
+
+Aggregated total layoffs per company to identify organizations with the highest impact.
+
+```sql
+SELECT company, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY company
+ORDER BY 2 DESC;
+```
+
+<img width="1159" height="324" alt="image" src="https://github.com/user-attachments/assets/b4314667-51b6-47d4-9abb-c09ac6a4258b" />
+
+This query identifies the time range covered by the dataset.
+
+```sql
+SELECT MIN(`date`), MAX(`date`)
+FROM layoffs_staging2;
+```
+
+<img width="226" height="50" alt="image" src="https://github.com/user-attachments/assets/5eab2fca-abc4-442e-8bee-27341bc340e5" />
+
+These queries show which industries and countries were most affected by layoffs.
+
+```sql
+SELECT industry, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY industry
+ORDER BY 2 DESC;
+```
+
+<img width="273" height="342" alt="image" src="https://github.com/user-attachments/assets/d442fcac-a46e-4a6a-bb39-bb33f05c9960" />
+
+```sql
+SELECT country, SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY country
+ORDER BY 2 DESC;
+```
+
+<img width="352" height="346" alt="image" src="https://github.com/user-attachments/assets/c226f495-8e59-4137-a9d7-6c90e72b7ff5" />
+
+I analyzed layoffs by year and month, including a rolling cumulative total to observe long-term trends.
+
+```sql
+
+SELECT YEAR(`date`), SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY YEAR(`date`)
+ORDER BY 1 DESC;
+```
+
+```sql
+WITH Rolling_Total AS
+ (
+ SELECT SUBSTRING(`date`,1,7) AS `MONTH`, SUM(total_laid_off) AS total_off
+ FROM layoffs_staging2
+ WHERE SUBSTRING(`date`,1,7) IS NOT NULL
+ GROUP BY `MONTH`
+ ORDER BY 1 ASC
+ )
+ SELECT `MONTH`, total_off
+ ,SUM(total_off) OVER(ORDER BY `MONTH`) AS Rolling_Total
+ FROM Rolling_Total;
+```
+
+<img width="279" height="131" alt="image" src="https://github.com/user-attachments/assets/ecad81eb-f140-48b2-abe8-e6e672a7cb88" />
+
+
+<img width="269" height="349" alt="image" src="https://github.com/user-attachments/assets/95840ef2-c0f1-4c60-8135-d6e15f82903b" />
+
+Using window functions, I ranked the top 5 companies with the highest layoffs for each year.
+
+```sql
+WITH company_year (company, years, total_laid_off) AS
+(
+SELECT company, YEAR (`date`), SUM(total_laid_off)
+FROM layoffs_staging2
+GROUP BY company, YEAR (`date`)
+), Company_Year_Rank AS
+(SELECT *, 
+DENSE_RANK() OVER (partition by years ORDER BY total_laid_off DESC) AS Ranking
+FROM company_year
+WHERE years IS NOT NULL
+)
+SELECT *
+FROM Company_Year_Rank
+WHERE Ranking <= 5 
+;
+```
+<img width="352" height="345" alt="image" src="https://github.com/user-attachments/assets/13c42242-2819-4da8-959b-6b5b51623eca" />
+
+
+
+
 
 
 
