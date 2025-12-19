@@ -1,4 +1,4 @@
-SQL Data Cleaning & Exploratory Data Analysis Projects
+# SQL Data Cleaning & Exploratory Data Analysis Projects
 
 # 🧠 Project Overview
 
