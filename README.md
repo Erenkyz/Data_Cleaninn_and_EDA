@@ -1,3 +1,38 @@
+Data Cleaning
+
+First, I inspected the raw layoffs table to understand the structure of the dataset, column names, and data quality before performing any cleaning operations.
+
+SELECT *
+FROM layoffs;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 🧹 Layoffs Dataset — Data Cleaning Project
 
 This project focuses on cleaning and preparing a layoffs dataset using SQL. The goal is to transform raw data into a clean, structured table suitable for analysis and reporting. The dataset contains information about layoffs across companies, industries, and countries.
